@@ -146,6 +146,7 @@ func (n *NodePlannableResourceInstance) evalTreeManagedResource(addr addrs.AbsRe
 				Dependencies: &n.Dependencies,
 			},
 			&EvalRefreshLifecycle{
+				Addr:                     addr,
 				Config:                   n.Config,
 				State:                    &instanceRefreshState,
 				ForceCreateBeforeDestroy: n.ForceCreateBeforeDestroy,
